@@ -1,6 +1,9 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Home from "../screens/Home";
+import Booking from "../screens/Booking";
+import Bookmark from "../screens/Bookmark";
+import ProfileSettings from "../screens/ProfileSettings";
 
 const Tab = createBottomTabNavigator();
 
@@ -11,9 +14,44 @@ const BottomNavBar = () => {
                 name="Home"
                 component={Home}
                 options={{
-                    tabBarLabel: "Home",
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="heart" color={color} size={size} />
+                    tabBarShowLabel: false,
+                    headerShown: false,
+                    tabBarInactiveTintColor: "gray",
+                    tabBarIcon: () => (
+                        <MaterialCommunityIcons name="home-variant-outline" color={"green"} size={24} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Booking"
+                component={Booking}
+                options={{
+                    tabBarShowLabel: false,
+                    headerShown: false,
+                    tabBarIcon: () => (
+                        <MaterialCommunityIcons name="ticket-confirmation-outline" color={"green"} size={24} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Bookmark"
+                component={Bookmark}
+                options={{
+                    tabBarShowLabel: false,
+                    headerShown: false,
+                    tabBarIcon: () => (
+                        <MaterialCommunityIcons name="bookmark-minus-outline" color={"green"} size={24} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Account"
+                component={ProfileSettings}
+                options={{
+                    tabBarShowLabel: false,
+                    headerShown: false,
+                    tabBarIcon: () => (
+                        <MaterialCommunityIcons name="account-outline" color={"green"} size={24} />
                     ),
                 }}
             />
