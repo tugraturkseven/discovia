@@ -17,8 +17,8 @@ const BottomNavBar = () => {
                     tabBarShowLabel: false,
                     headerShown: false,
                     tabBarInactiveTintColor: "gray",
-                    tabBarIcon: () => (
-                        <MaterialCommunityIcons name="home-variant-outline" color={"green"} size={24} />
+                    tabBarIcon: ({ focused }) => (
+                        <MaterialCommunityIcons name={focused ? "home-variant" : "home-variant-outline"} color={focused ? "green" : "grey"} size={24} />
                     ),
                 }}
             />
@@ -28,8 +28,8 @@ const BottomNavBar = () => {
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
-                    tabBarIcon: () => (
-                        <MaterialCommunityIcons name="ticket-confirmation-outline" color={"green"} size={24} />
+                    tabBarIcon: ({ focused }) => (
+                        <MaterialCommunityIcons name={focused ? "ticket-confirmation" : "ticket-confirmation-outline"} color={focused ? "green" : "grey"} size={24} />
                     ),
                 }}
             />
@@ -39,8 +39,8 @@ const BottomNavBar = () => {
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
-                    tabBarIcon: () => (
-                        <MaterialCommunityIcons name="bookmark-minus-outline" color={"green"} size={24} />
+                    tabBarIcon: ({ focused }) => (
+                        <MaterialCommunityIcons name={focused ? "bookmark-minus" : "bookmark-minus-outline"} color={focused ? "green" : "grey"} size={24} />
                     ),
                 }}
             />
@@ -50,8 +50,8 @@ const BottomNavBar = () => {
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
-                    tabBarIcon: () => (
-                        <MaterialCommunityIcons name="account-outline" color={"green"} size={24} />
+                    tabBarIcon: ({ focused }) => (
+                        <MaterialCommunityIcons name={focused ? "account" : "account-outline"} color={focused ? "green" : "grey"} size={24} />
                     ),
                 }}
             />
