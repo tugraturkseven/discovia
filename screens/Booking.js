@@ -1,4 +1,4 @@
-import { View, SafeAreaView, StyleSheet } from 'react-native'
+import { View, SafeAreaView, StyleSheet, ScrollView } from 'react-native'
 import { Text, Searchbar } from 'react-native-paper'
 import { useState } from 'react';
 import ListingCard from '../components/ListingCard';
@@ -24,9 +24,9 @@ const Booking = () => {
                     style={styles.searchbar}
                 />
             </View>
-            <View>
+            <ScrollView>
                 <ListingCard />
-            </View>
+            </ScrollView>
         </SafeAreaView>
 
     )

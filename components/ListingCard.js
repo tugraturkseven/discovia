@@ -1,8 +1,10 @@
 import { Dimensions, View, Image, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import Carousel from 'react-native-reanimated-carousel';
-import { Text, Avatar } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faMountainCity, faBed, faCalendarDays, faCoins } from '@fortawesome/free-solid-svg-icons';
 
 const ListingCard = () => {
     const width = Dimensions.get('window').width;
@@ -22,56 +24,191 @@ const ListingCard = () => {
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/8d/1c/7d/photo0jpg.jpg?w=1200&h=-1&s=1"
     ];
     return (
-        <ScrollView>
+
+        <View>
             <View style={styles.card}>
-                <Carousel
-                    loop
-                    width={width * 0.9}
-                    height={width / 2}
-                    data={giresun}
-                    mode="parallax"
-                    modeConfig={{
-                        parallaxScrollingScale: 0.9,
-                        parallaxScrollingOffset: 50,
-                    }}
-                    renderItem={({ index }) => {
-                        return (
-                            <Image source={{ uri: giresun[index] }} style={{ width: width * 0.9, height: width / 2, borderRadius: 8 }} />
-                        );
-                    }}
-                />
+                <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+                    <Carousel
+                        loop
+                        width={width * 0.9}
+                        height={width / 2}
+                        data={giresun}
+                        mode="parallax"
+                        modeConfig={{
+                            parallaxScrollingScale: 0.9,
+                            parallaxScrollingOffset: 50,
+                        }}
+                        renderItem={({ index }) => {
+                            return (
+                                <Image source={{ uri: giresun[index] }} style={{ width: width * 0.9, height: width / 2, borderRadius: 8 }} />
+                            );
+                        }}
+                    />
+                </View>
+
                 <View style={styles.container}>
                     <View>
                         <Text variant='headlineSmall'>A Great Nature</Text>
                         <Text variant='labelLarge' style={styles.text}>Giresun, Turkey.</Text>
                     </View>
                     <View style={styles.fav}>
-                        <FontAwesomeIcon icon="fa-regular fa-heart" />
-                        <Text variant='labelLarge' style={styles.text}>4.5</Text>
+                        <FontAwesomeIcon icon={faHeart} size={16} color='green' style={{ marginRight: 8 }} />
+                        <Text variant='labelLarge' style={styles.text}>4</Text>
                     </View>
                 </View>
+
+                <View style={styles.container}>
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faMountainCity}></FontAwesomeIcon>
+                        <Text>Nature</Text>
+                    </View>
+
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faBed}></FontAwesomeIcon>
+                        <Text>Hotel</Text>
+                    </View>
+
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon>
+                        <Text>2 Days</Text>
+                    </View>
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faCoins}></FontAwesomeIcon>
+                        <Text>350</Text>
+                    </View>
+
+                </View>
+
             </View >
-        </ScrollView>
+
+            <View style={styles.card}>
+                <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+                    <Carousel
+                        loop
+                        width={width * 0.9}
+                        height={width / 2}
+                        data={sinop}
+                        mode="parallax"
+                        modeConfig={{
+                            parallaxScrollingScale: 0.9,
+                            parallaxScrollingOffset: 50,
+                        }}
+                        renderItem={({ index }) => {
+                            return (
+                                <Image source={{ uri: sinop[index] }} style={{ width: width * 0.9, height: width / 2, borderRadius: 8 }} />
+                            );
+                        }}
+                    />
+                </View>
+
+                <View style={styles.container}>
+                    <View>
+                        <Text variant='headlineSmall'>Peaceful Place</Text>
+                        <Text variant='labelLarge' style={styles.text}>Sinop, Turkey.</Text>
+                    </View>
+                    <View style={styles.fav}>
+                        <FontAwesomeIcon icon={faHeart} size={16} color='green' style={{ marginRight: 8 }} />
+                        <Text variant='labelLarge' style={styles.text}>5</Text>
+                    </View>
+                </View>
+
+                <View style={styles.container}>
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faMountainCity}></FontAwesomeIcon>
+                        <Text>Nature</Text>
+                    </View>
+
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faBed}></FontAwesomeIcon>
+                        <Text>Hotel</Text>
+                    </View>
+
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon>
+                        <Text>2 Days</Text>
+                    </View>
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faCoins}></FontAwesomeIcon>
+                        <Text>350</Text>
+                    </View>
+
+                </View>
+
+            </View >
+
+            <View style={styles.card}>
+                <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+                    <Carousel
+                        loop
+                        width={width * 0.9}
+                        height={width / 2}
+                        data={istanbul}
+                        mode="parallax"
+                        modeConfig={{
+                            parallaxScrollingScale: 0.9,
+                            parallaxScrollingOffset: 50,
+                        }}
+                        renderItem={({ index }) => {
+                            return (
+                                <Image source={{ uri: istanbul[index] }} style={{ width: width * 0.9, height: width / 2, borderRadius: 8 }} />
+                            );
+                        }}
+                    />
+                </View>
+
+                <View style={styles.container}>
+                    <View>
+                        <Text variant='headlineSmall'>Heaven in the World</Text>
+                        <Text variant='labelLarge' style={styles.text}>Istanbul, Turkey.</Text>
+                    </View>
+                    <View style={styles.fav}>
+                        <FontAwesomeIcon icon={faHeart} size={16} color='green' style={{ marginRight: 8 }} />
+                        <Text variant='labelLarge' style={styles.text}>9</Text>
+                    </View>
+                </View>
+
+                <View style={styles.container}>
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faMountainCity}></FontAwesomeIcon>
+                        <Text>City</Text>
+                    </View>
+
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faBed}></FontAwesomeIcon>
+                        <Text>Hotel</Text>
+                    </View>
+
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faCalendarDays}></FontAwesomeIcon>
+                        <Text>8 Days</Text>
+                    </View>
+                    <View style={styles.summary}>
+                        <FontAwesomeIcon icon={faCoins}></FontAwesomeIcon>
+                        <Text>3550</Text>
+                    </View>
+
+                </View>
+
+            </View >
+        </View>
 
     )
 }
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: "white",
-        justifyContent: "space-between",
+        backgroundColor: 'white',
+        borderColor: 'grey',
+        borderStyle: 'solid',
+        borderWidth: 1,
         borderRadius: 16,
         marginHorizontal: 16,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 1,
-            height: 1,
-        },
-        shadowOpacity: 0.25,
-        zIndex: 3,
+        marginBottom: 16,
+
     },
     container: {
         marginHorizontal: 16,
+        marginBottom: 8,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
@@ -80,8 +217,14 @@ const styles = StyleSheet.create({
     },
     fav: {
         flexDirection: 'row',
-        alignItems: 'baseline',
-    }
+    },
+    summary: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        width: 70,
+        marginVertical: 8,
+    },
 });
 
 export default ListingCard
