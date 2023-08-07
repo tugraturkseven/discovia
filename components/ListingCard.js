@@ -1,4 +1,4 @@
-import { Dimensions, View, Image, StyleSheet, ScrollView } from 'react-native'
+import { Dimensions, View, Image, StyleSheet, ImageBackground } from 'react-native'
 import React from 'react'
 import Carousel from 'react-native-reanimated-carousel';
 import { Text } from 'react-native-paper';
@@ -28,6 +28,7 @@ const ListingCard = () => {
         <View>
             <View style={styles.card}>
                 <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+
                     <Carousel
                         loop
                         width={width * 0.9}
@@ -40,7 +41,7 @@ const ListingCard = () => {
                         }}
                         renderItem={({ index }) => {
                             return (
-                                <Image source={{ uri: giresun[index] }} style={{ width: width * 0.9, height: width / 2, borderRadius: 8 }} />
+                                <ImageBackground source={{ uri: giresun[index] }} style={{ width: width * 0.9, height: width / 2, borderRadius: 8 }} />
                             );
                         }}
                     />
@@ -198,10 +199,6 @@ const ListingCard = () => {
 const styles = StyleSheet.create({
     card: {
         backgroundColor: 'white',
-        borderColor: 'grey',
-        borderStyle: 'solid',
-        borderWidth: 1,
-        borderRadius: 16,
         marginHorizontal: 16,
         marginBottom: 16,
 
