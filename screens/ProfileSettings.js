@@ -1,5 +1,5 @@
 import { View, SafeAreaView } from 'react-native'
-import { Text, Button } from 'react-native-paper'
+import { Text, Button, Switch } from 'react-native-paper'
 import { faCircleUser } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 const ProfileSettings = () => {
@@ -20,7 +20,25 @@ const ProfileSettings = () => {
             <View>
                 <Text variant='displaySmall'>Application</Text>
                 <View>
+                    <FontAwesomeIcon icon={faCircleUser} size={64} color='grey' style={{ marginRight: 8 }} />
+                    <Text variant='headlineMedium'>Language</Text>
+                    <Button icon='arrow-right-thick' />
+                </View>
+                <View>
+                    <FontAwesomeIcon icon={faCircleUser} size={64} color='grey' style={{ marginRight: 8 }} />
+                    <Text variant='headlineMedium'>Notifications</Text>
+                    <Button icon='arrow-right-thick' />
+                </View>
+                <View>
+                    <FontAwesomeIcon icon={faCircleUser} size={64} color='grey' style={{ marginRight: 8 }} />
+                    <Text variant='headlineMedium'>Dark Mode</Text>
+                    <Switch value={false} />
 
+                </View>
+                <View>
+                    <FontAwesomeIcon icon={faCircleUser} size={64} color='grey' style={{ marginRight: 8 }} />
+                    <Text variant='headlineMedium'>Help</Text>
+                    <Button icon='arrow-right-thick' />
                 </View>
             </View>
 
