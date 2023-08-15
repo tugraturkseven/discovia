@@ -38,7 +38,7 @@ Travisor is a revolutionary travel guidance application that empowers travelers 
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/your-username/travisor.git`
+1. Clone the repository: `git clone https://github.com/tugraturkseven/travisor`
 2. Navigate to the project directory: `cd travisor`
 3. Install dependencies: `npm install`
 4. Start the Expo development server: `npm start`
