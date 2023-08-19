@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Home from "../screens/Home";
-import Booking from "../screens/Booking";
-import Bookmark from "../screens/Bookmark";
+import Discover from "../screens/Discover";
+import Share from "../screens/Share";
 import ProfileSettings from "../screens/ProfileSettings";
 
 const Tab = createBottomTabNavigator();
@@ -23,24 +23,24 @@ const BottomNavBar = () => {
                 }}
             />
             <Tab.Screen
-                name="Booking"
-                component={Booking}
+                name="Discover"
+                component={Discover}
+                options={{
+                    tabBarShowLabel: false,
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) => (
+                        <MaterialCommunityIcons name={focused ? "compass" : "compass-outline"} color={focused ? "green" : "grey"} size={24} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Share"
+                component={Share}
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
                         <MaterialCommunityIcons name={focused ? "ticket-confirmation" : "ticket-confirmation-outline"} color={focused ? "green" : "grey"} size={24} />
-                    ),
-                }}
-            />
-            <Tab.Screen
-                name="Bookmark"
-                component={Bookmark}
-                options={{
-                    tabBarShowLabel: false,
-                    headerShown: false,
-                    tabBarIcon: ({ focused }) => (
-                        <MaterialCommunityIcons name={focused ? "bookmark-minus" : "bookmark-minus-outline"} color={focused ? "green" : "grey"} size={24} />
                     ),
                 }}
             />

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ListingCard from '../components/ListingCard';
 
 
-const Booking = () => {
+const Discover = () => {
 
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default Booking
+export default Discover
