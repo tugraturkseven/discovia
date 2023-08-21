@@ -1,5 +1,5 @@
 import { SafeAreaView, View, StyleSheet } from 'react-native'
-import { Text, Searchbar } from 'react-native-paper'
+import { Text, Searchbar, TextInput } from 'react-native-paper'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faTreeCity, faCity, faBuilding, faTree, faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons'
@@ -37,8 +37,21 @@ const Share = () => {
                     <FontAwesomeIcon icon={faUmbrellaBeach} size={32} color='grey' />
                 </View>
             </View>
-            <View>
-                <Text></Text>
+            <View style={{ flexDirection: 'row' }}>
+                <View>
+                    <Text>💸 Budget</Text>
+                    <TextInput
+                        label="Budget"
+
+                    />
+                </View>
+                <View>
+                    <Text>📅 Duration</Text>
+                    <TextInput
+                        label="Duration"
+
+                    />
+                </View>
             </View>
         </SafeAreaView>
     )
