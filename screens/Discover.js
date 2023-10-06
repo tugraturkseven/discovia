@@ -1,10 +1,11 @@
 import { View, SafeAreaView, StyleSheet, ScrollView } from 'react-native'
-import { Text, Searchbar } from 'react-native-paper'
+import { Text, Searchbar, Button } from 'react-native-paper'
 import { useState } from 'react';
 import ListingCard from '../components/ListingCard';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faChevronLeft, faBell } from '@fortawesome/free-solid-svg-icons';
 
-
-const Discover = () => {
+const Discover = ({ navigation }) => {
 
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -14,7 +15,13 @@ const Discover = () => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
-                <Text variant='displaySmall' style={{ color: "green" }}>Travisor</Text>
+                <Button style={{ margin: 0, padding: 0 }} onPress={() => navigation.goBack()}>
+                    <FontAwesomeIcon icon={faChevronLeft} size={24} style={{ color: 'green' }} />
+                </Button>
+                <Text variant='displaySmall' style={{ color: "green", }}>Travisor</Text>
+                <Button style={{ margin: 0, padding: 0 }}>
+                    <FontAwesomeIcon icon={faBell} size={24} style={{ color: 'green' }} />
+                </Button>
             </View>
             <View>
                 <Searchbar
@@ -40,8 +47,10 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
     },
     header: {
+        flexDirection: "row",
         margin: 16,
         alignItems: "center",
+        justifyContent: "space-between",
     },
     searchbar: {
         margin: 16,
