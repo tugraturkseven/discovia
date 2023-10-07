@@ -2,9 +2,7 @@ import { View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { List, Text } from 'react-native-paper';
 import React from 'react'
-import UserAvatar from '../components/UserAvatar';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faBell } from '@fortawesome/free-regular-svg-icons';
+
 /*
   'Sports': '⚽',
         'Cinema': '🎬',
@@ -18,7 +16,7 @@ const Category = ({ navigation }) => {
         'Route': {
             icon: '🗺️',
             description: 'Discover new routes for your next journey',
-            screen: 'Discover',
+            screen: 'Routes',
         },
         'Restaurant': {
             icon: '🥗',

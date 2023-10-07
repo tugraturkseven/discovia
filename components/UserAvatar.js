@@ -2,6 +2,7 @@ import { View } from 'react-native'
 import React from 'react'
 import { Avatar } from 'react-native-paper'
 import Profile from '../assets/profile.png'
+
 /*
 https://ibb.co/FHgxtgd
 https://ibb.co/9WvxyR3

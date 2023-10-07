@@ -3,10 +3,19 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 import Home from "../screens/Home";
 import Category from '../screens/Category'
-import Discover from "../screens/Discover";
 import Share from "../screens/Share";
 import ProfileSettings from "../screens/ProfileSettings";
 
+import Routes from "../screens/Categories/Route/Routes"
+import Restaurants from "../screens/Categories/Restaurant/Restaurants"
+import Events from "../screens/Categories/Events/Events"
+import Nightlife from "../screens/Categories/Nightlife/Nightlife"
+import Museums from "../screens/Categories/Museum/Museums"
+import Parks from "../screens/Categories/Parks/Parks"
+import Camping from "../screens/Categories/Camping/Campings"
+import Religion from "../screens/Categories/Religion/Religions";
+import Shoppings from "../screens/Categories/Shopping/Shoppings";
+import Beachs from "../screens/Categories/Beach/Beachs";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -24,7 +33,16 @@ const CategoryStack = () => {
                 headerShown: false,
             }}>
                 <Stack.Screen name="Category" component={Category} />
-                <Stack.Screen name="Discover" component={Discover} />
+                <Stack.Screen name="Routes" component={Routes} />
+                <Stack.Screen name="Restaurants" component={Restaurants} />
+                <Stack.Screen name="Events" component={Events} />
+                <Stack.Screen name="Nightlife" component={Nightlife} />
+                <Stack.Screen name="Museums" component={Museums} />
+                <Stack.Screen name="Parks" component={Parks} />
+                <Stack.Screen name="Camping" component={Camping} />
+                <Stack.Screen name="Religion" component={Religion} />
+                <Stack.Screen name="Shopping" component={Shoppings} />
+                <Stack.Screen name="Beach" component={Beachs} />
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -74,7 +92,7 @@ const BottomNavBar = () => {
                     tabBarShowLabel: false,
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
-                        <MaterialCommunityIcons name={focused ? "account" : "account-outline"} color={focused ? "green" : "grey"} size={24} />
+                        <MaterialCommunityIcons name={focused ? "cog" : "cog-outline"} color={focused ? "green" : "grey"} size={24} />
                     ),
                 }}
             />
