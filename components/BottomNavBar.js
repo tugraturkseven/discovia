@@ -3,8 +3,8 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 import Home from "../screens/Home";
 import Category from '../screens/Category'
-import Share from "../screens/Share";
-import ProfileSettings from "../screens/ProfileSettings";
+import Profile from "../screens/Profile";
+import Settings from "../screens/Settings";
 
 import Routes from "../screens/Categories/Route/Routes"
 import Restaurants from "../screens/Categories/Restaurant/Restaurants"
@@ -75,8 +75,8 @@ const BottomNavBar = () => {
                 }}
             />
             <Tab.Screen
-                name="Share"
-                component={Share}
+                name="Profile"
+                component={Profile}
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
@@ -86,8 +86,8 @@ const BottomNavBar = () => {
                 }}
             />
             <Tab.Screen
-                name="Account"
-                component={ProfileSettings}
+                name="Settings"
+                component={Settings}
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
