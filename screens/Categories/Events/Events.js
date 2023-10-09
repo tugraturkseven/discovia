@@ -23,9 +23,9 @@ const Events = ({ navigation }) => {
             description: 'Drama, comedy, musicals and more',
             screen: 'Theatre',
         },
-        'Music': {
+        'Concerts': {
             icon: '🎹',
-            description: 'Concerts and live music with the best artists',
+            description: 'Live music with the best artists',
             screen: 'Music',
         },
         'Festival': {

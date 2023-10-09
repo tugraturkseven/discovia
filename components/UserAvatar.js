@@ -11,10 +11,12 @@ https://ibb.co/Y2pyxsz
 */
 
 
-const UserAvatar = () => {
+const UserAvatar = (props) => {
+    const { size = 54 } = props
+
     return (
         <View>
-            <Avatar.Image size={54} style={{ backgroundColor: "#92E3A9" }} source={Profile} />
+            <Avatar.Image size={props.size} style={{ backgroundColor: "#92E3A9" }} source={Profile} />
         </View>
     )
 }

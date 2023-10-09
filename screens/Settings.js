@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { Text, List } from 'react-native-paper'
 import UserAvatar from '../components/UserAvatar'
 
-const Settings = () => {
+const Settings = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
@@ -18,6 +18,7 @@ const Settings = () => {
                         left={props => <UserAvatar {...props} />}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         style={{ paddingLeft: 8 }}
+                        onPress={() => navigation.navigate('Account')}
                     />
                 </List.Section>
             </View>

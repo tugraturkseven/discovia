@@ -16,6 +16,9 @@ import Camping from "../screens/Categories/Camping/Campings"
 import Religion from "../screens/Categories/Religion/Religions";
 import Shoppings from "../screens/Categories/Shopping/Shoppings";
 import Beachs from "../screens/Categories/Beach/Beachs";
+import Account from "../screens/Settings/Account";
+
+
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -24,7 +27,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-
+// Category Stack Navigation Screens
 const CategoryStack = () => {
     return (
         <NavigationContainer independent={true}>
@@ -43,12 +46,28 @@ const CategoryStack = () => {
                 <Stack.Screen name="Religion" component={Religion} />
                 <Stack.Screen name="Shopping" component={Shoppings} />
                 <Stack.Screen name="Beach" component={Beachs} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );
 }
 
-const BottomNavBar = () => {
+const SettingsStack = () => {
+    return (
+        <NavigationContainer independent={true}>
+            <Stack.Navigator screenOptions={{
+                tabBarShowLabel: false,
+                headerShown: false,
+            }}>
+                <Stack.Screen name="Settings" component={Settings} />
+                <Stack.Screen name="Account" component={Account} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
+
+
+const Navigation = () => {
     return (
         <Tab.Navigator>
             <Tab.Screen
@@ -87,7 +106,7 @@ const BottomNavBar = () => {
             />
             <Tab.Screen
                 name="Settings"
-                component={Settings}
+                component={SettingsStack}
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
@@ -100,4 +119,4 @@ const BottomNavBar = () => {
     );
 };
 
-export default BottomNavBar;
+export default Navigation;
