@@ -18,7 +18,7 @@ const Discover = ({ navigation }) => {
                 <Button style={{ margin: 0, padding: 0 }} onPress={() => navigation.goBack()}>
                     <FontAwesomeIcon icon={faChevronLeft} size={24} style={{ color: 'green' }} />
                 </Button>
-                <Text variant='displaySmall' style={{ color: "green", }}>Travisor</Text>
+                <Text variant='displaySmall' style={{ color: "green", }}>Discovia</Text>
                 <Button style={{ margin: 0, padding: 0 }}>
                     <FontAwesomeIcon icon={faBell} size={24} style={{ color: 'green' }} />
                 </Button>

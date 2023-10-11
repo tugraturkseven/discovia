@@ -8,6 +8,11 @@ import React from 'react'
 const RestaurantCategory = ({ navigation }) => {
 
     const restaurantCategories = {
+        'All Restaurants': {
+            icon: '🥗',
+            description: 'Explore all restaurants in the city',
+            screen: 'AllRestaurants',
+        },
         'Fast Food': {
             icon: '🍔',
             description: 'Grab a quick bite',
@@ -47,11 +52,6 @@ const RestaurantCategory = ({ navigation }) => {
             icon: '🍻',
             description: 'Alcoholic beverages',
             screen: 'Bar',
-        },
-        'Ice Cream': {
-            icon: '🍦',
-            description: 'Cool down with an ice cream',
-            screen: 'IceCream',
         },
         'Seafood': {
             icon: '🦞',

@@ -7,8 +7,13 @@ import React from 'react'
 
 const Parks = ({ navigation }) => {
     const parkCategories = {
-        'National Park': {
+        'All Parks': {
             icon: '🏞️',
+            description: 'Explore all parks in the city',
+            screen: 'AllParks',
+        },
+        'National Park': {
+            icon: '🌻',
             description: 'Quiet places to relax and enjoy nature',
             screen: 'National Park',
         },

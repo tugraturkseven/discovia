@@ -26,7 +26,7 @@ const Account = ({ navigation }) => {
             </View>
 
             <View style={styles.profile}>
-                <UserAvatar size={128}></UserAvatar>
+                <UserAvatar size={128} editable={true}></UserAvatar>
                 <View style={{ flexDirection: 'column', paddingHorizontal: 16, justifyContent: 'space-evenly', width: '70%', }}>
                     <Text variant='titleMedium'>Profile Photo</Text>
                     <Text variant='bodyMedium'>Upload a photo so your friends can recognize you</Text>

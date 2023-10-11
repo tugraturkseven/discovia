@@ -9,6 +9,11 @@ import React from 'react'
 const Nightlife = ({ navigation }) => {
 
     const nightlifeCategories = {
+        'All Nightlife': {
+            icon: '🍺',
+            description: 'Explore all nightlife in the city',
+            screen: 'AllNightlife',
+        },
         'Pub': {
             icon: '🍻',
             description: 'Enjoy a beer with your friends',

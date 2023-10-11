@@ -8,8 +8,13 @@ import React from 'react'
 const Campings = ({ navigation }) => {
 
     const campingCategories = {
-        'Campground': {
+        'All Campings': {
             icon: '🏕️',
+            description: 'Explore all campings in the city',
+            screen: 'AllCampings',
+        },
+        'Campground': {
+            icon: '⛺',
             description: 'Find the best campgrounds near you',
             screen: 'Campground',
         },

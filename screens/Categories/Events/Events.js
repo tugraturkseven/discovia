@@ -8,6 +8,11 @@ import React from 'react'
 const Events = ({ navigation }) => {
 
     const eventCategories = {
+        'All Events': {
+            icon: '🎉',
+            description: 'Explore all events in the city',
+            screen: 'AllEvents',
+        },
         'Sports': {
             icon: '⚽',
             description: 'Find out what is happening in the city',

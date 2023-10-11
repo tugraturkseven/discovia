@@ -8,6 +8,11 @@ import React from 'react'
 const Museums = ({ navigation }) => {
 
     const museumCategories = {
+        'All Museums': {
+            icon: '🏛️',
+            description: 'Explore all museums in the city',
+            screen: 'AllMuseums',
+        },
         'Art Museum': {
             icon: '🎨',
             description: 'Museums with the best art collections',

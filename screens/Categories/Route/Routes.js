@@ -8,6 +8,11 @@ import React from 'react'
 const RouteCategories = ({ navigation }) => {
 
     const routeCategories = {
+        'All Routes': {
+            icon: '🗺️',
+            description: 'Explore all routes in the city',
+            screen: 'AllRoutes',
+        },
         'Nature': {
             icon: '⛰️',
             description: 'Explore the city\'s natural beauty',

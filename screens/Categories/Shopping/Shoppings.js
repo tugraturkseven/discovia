@@ -8,19 +8,24 @@ import React from 'react'
 const Shoppings = ({ navigation }) => {
 
     const shoppingCategories = {
-        'Shopping Center': {
+        'All Shoppings': {
             icon: '🛍️',
+            description: 'Explore all shoppings in the city',
+            screen: 'AllShoppings',
+        },
+        'Shopping Center': {
+            icon: '🛒',
             description: 'Shopping centers and stores',
             screen: 'ShoppingCenter',
         },
         'Supermarket': {
-            icon: '🛒',
+            icon: '🍞',
             description: 'Supermarkets and grocery stores',
             screen: 'Supermarket',
         },
         'Market': {
             icon: '🏬',
-            description: 'Markets and street markets',
+            description: 'Street markets and fairs',
             screen: 'Market',
         },
 

@@ -8,15 +8,20 @@ import React from 'react'
 const Religions = ({ navigation }) => {
 
     const religionCategories = {
-        'Church': {
-            icon: '⛪',
-            description: 'Churches, cathedrals and basilicas in the city',
-            screen: 'Church',
+        'All Temples': {
+            icon: '🕯️',
+            description: 'Explore all religions in the city',
+            screen: 'AllReligions',
         },
         'Mosque': {
             icon: '🕌',
             description: 'Mosques known for their architecture and history',
             screen: 'Mosque',
+        },
+        'Church': {
+            icon: '⛪',
+            description: 'Churches, cathedrals and basilicas in the city',
+            screen: 'Church',
         },
         'Synagogue': {
             icon: '🕍',

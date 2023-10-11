@@ -48,8 +48,8 @@ const Category = ({ navigation }) => {
             description: 'Find the best places to camp',
             screen: 'Camping',
         },
-        'Religion': {
-            icon: '⛪',
+        'Temples': {
+            icon: '🕯️',
             description: 'City\'s most important religious places',
             screen: 'Religion',
         },
@@ -65,7 +65,7 @@ const Category = ({ navigation }) => {
         }
     };
 
-    const listPlacesToVisit = Object.keys(placesToVisit).map((key, index) => {
+    const listPlacesToVisit = Object.keys(placesToVisit).map((key) => {
         return (
             <List.Item
                 key={key}
@@ -78,11 +78,11 @@ const Category = ({ navigation }) => {
         )
     });
 
-    // Add the avatar and the bell icon to the header
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
-                <Text variant='displaySmall' style={{ color: "green" }}>Travisor</Text>
+                <Text variant='displaySmall' style={{ color: "darkorange" }}>Discovia</Text>
             </View>
             <List.Section>
                 {listPlacesToVisit}

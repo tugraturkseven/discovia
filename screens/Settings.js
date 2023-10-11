@@ -7,7 +7,7 @@ const Settings = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
-                <Text variant='displaySmall' style={{ color: "green" }}>Travisor</Text>
+                <Text variant='displaySmall' style={{ color: "darkorange" }}>Discovia</Text>
             </View>
             <View style={{ padding: 16, paddingBottom: 8 }}>
                 <Text variant='titleLarge'>Account</Text>
@@ -15,7 +15,7 @@ const Settings = ({ navigation }) => {
                     <List.Item
                         title="Tugra Turkseven"
                         description="Manage your account settings"
-                        left={props => <UserAvatar {...props} />}
+                        left={props => <UserAvatar {...props} size={54} />}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         style={{ paddingLeft: 8 }}
                         onPress={() => navigation.navigate('Account')}
@@ -27,14 +27,14 @@ const Settings = ({ navigation }) => {
                 <List.Section>
 
                     <List.Item
-                        title='Addresses'
-                        description='Manage your addresses'
-                        left={props => <Text {...props} variant='displaySmall'>🏠</Text>}
+                        title='City'
+                        description='Choose your city for recommendations'
+                        left={props => <Text {...props} variant='displaySmall'>🌇</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                     />
                     <List.Item
                         title="Theme"
-                        description="Choose your theme color"
+                        description="Dark, light or soft mode"
                         left={props => <Text {...props} variant='displaySmall'>🌙</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
 
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         justifyContent: 'flex-start',
-        backgroundColor: "white",
+        backgroundColor: '#fff',
     },
     header: {
         paddingHorizontal: 16,

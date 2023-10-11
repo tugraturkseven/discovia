@@ -7,8 +7,13 @@ import React from 'react'
 
 const Beachs = ({ navigation }) => {
     const beachCategories = {
-        'Beach': {
+        'All Beachs': {
             icon: '🏖️',
+            description: 'Explore all beachs in the city',
+            screen: 'AllBeachs',
+        },
+        'Beach': {
+            icon: '🏊',
             description: 'Beaches and beach clubs to enjoy the sea',
             screen: 'Beach',
         },
