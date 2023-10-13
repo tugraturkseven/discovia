@@ -1,13 +1,13 @@
 import { View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { List, Text, Button } from 'react-native-paper';
+import { List, Text, Button, useTheme } from 'react-native-paper';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faChevronLeft, faBell } from '@fortawesome/free-solid-svg-icons';
 import React from 'react'
 
 
 const Nightlife = ({ navigation }) => {
-
+    const { colors } = useTheme();
     const nightlifeCategories = {
         'All Nightlife': {
             icon: '🍺',
@@ -69,14 +69,14 @@ const Nightlife = ({ navigation }) => {
     }
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
             <View style={styles.header}>
                 <Button style={{ margin: 0, padding: 0 }} onPress={() => navigation.goBack()}>
                     <FontAwesomeIcon icon={faChevronLeft} size={24} style={{ color: 'green' }} />
                 </Button>
                 <Text variant='displaySmall' style={{ color: "green", }}>Travisor</Text>
                 <Button style={{ margin: 0, padding: 0 }}>
-                    <FontAwesomeIcon icon={faBell} size={24} style={{ color: 'white' }} />
+                    <FontAwesomeIcon icon={faBell} size={24} style={{ color: colors.background }} />
                 </Button>
             </View>
             <List.Section>

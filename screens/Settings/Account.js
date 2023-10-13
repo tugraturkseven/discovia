@@ -1,27 +1,23 @@
 import { View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { List, Text, Button, TextInput } from 'react-native-paper';
+import { List, Text, Button, useTheme } from 'react-native-paper';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faChevronLeft, faBell } from '@fortawesome/free-solid-svg-icons';
 import UserAvatar from '../../components/UserAvatar';
 import React, { useState } from 'react'
 
 const Account = ({ navigation }) => {
-
-    const [name, setName] = useState('Tuğra Türkseven')
-    const [userName, setUsername] = useState('tugraturkseven');
-    const [userEmail, setUserEmail] = useState('tugraturkseven@hotmail.com');
-    const [userPhone, setUserPhone] = useState('+90 555 555 55 55');
+    const { colors } = useTheme();
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
             <View style={styles.header}>
                 <Button style={{ margin: 0, padding: 0 }} onPress={() => navigation.goBack()}>
-                    <FontAwesomeIcon icon={faChevronLeft} size={24} style={{ color: 'green' }} />
+                    <FontAwesomeIcon icon={faChevronLeft} size={24} style={{ color: 'darkorange' }} />
                 </Button>
-                <Text variant='displaySmall' style={{ color: "green", }}>Travisor</Text>
+                <Text variant='displaySmall' style={{ color: "darkorange", }}>Discovia</Text>
                 <Button style={{ margin: 0, padding: 0 }}>
-                    <FontAwesomeIcon icon={faBell} size={24} style={{ color: 'white' }} />
+                    <FontAwesomeIcon icon={faBell} size={24} style={{ color: colors.background }} />
                 </Button>
             </View>
 
@@ -30,7 +26,7 @@ const Account = ({ navigation }) => {
                 <View style={{ flexDirection: 'column', paddingHorizontal: 16, justifyContent: 'space-evenly', width: '70%', }}>
                     <Text variant='titleMedium'>Profile Photo</Text>
                     <Text variant='bodyMedium'>Upload a photo so your friends can recognize you</Text>
-                    <Button mode='contained' style={{ backgroundColor: 'green' }}>Manage your photo</Button>
+                    <Button mode='contained' style={{ backgroundColor: 'darkorange' }}>Manage your photo</Button>
                 </View>
 
             </View>

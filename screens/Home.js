@@ -1,20 +1,26 @@
-import { View, SafeAreaView, StyleSheet } from 'react-native'
-import { Text, IconButton, MD3Colors } from 'react-native-paper'
+import { View, StyleSheet } from 'react-native'
+import { Text, IconButton, useTheme } from 'react-native-paper'
+import { SafeAreaView } from 'react-native-safe-area-context'
+
 
 import Hero from '../components/Hero'
 import UserAvatar from '../components/UserAvatar'
 import TripCard from '../components/TripCard'
 
+
 const Home = () => {
+
+    const { colors } = useTheme();
+
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
             <View style={styles.header}>
                 <UserAvatar />
                 <View>
-                    <Text variant='titleMedium' style={{ color: "grey" }}>Welcome back! 👋</Text>
+                    <Text variant='titleMedium' >Welcome back! 👋</Text>
                     <Text variant='headlineLarge' style={{ fontWeight: "bold" }}>Tugra Turkseven</Text>
                 </View>
-                <IconButton icon="bell-badge-outline" style={{ color: MD3Colors.tertiary70 }} size={24} onPress={() => console.log('Pressed')} />
+                <IconButton icon="bell-badge-outline" style={{ color: colors.onBackground }} size={24} onPress={() => console.log('Pressed')} />
             </View>
             <Hero></Hero>
             <View style={styles.text}>
@@ -31,7 +37,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'flex-start',
-        backgroundColor: "white",
     },
     header: {
         margin: 16,

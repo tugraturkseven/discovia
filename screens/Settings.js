@@ -1,16 +1,19 @@
 import { View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Text, List } from 'react-native-paper'
+import { Text, List, useTheme } from 'react-native-paper'
 import UserAvatar from '../components/UserAvatar'
 
+
 const Settings = ({ navigation }) => {
+    const { colors } = useTheme();
+
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
             <View style={styles.header}>
-                <Text variant='displaySmall' style={{ color: "darkorange" }}>Discovia</Text>
+                <Text variant='displaySmall' style={{ color: 'darkorange' }}>Discovia</Text>
             </View>
             <View style={{ padding: 16, paddingBottom: 8 }}>
-                <Text variant='titleLarge'>Account</Text>
+                <Text variant='titleLarge' >Account</Text>
                 <List.Section>
                     <List.Item
                         title="Tugra Turkseven"
@@ -25,7 +28,6 @@ const Settings = ({ navigation }) => {
             <View style={{ padding: 16 }}>
                 <Text variant='titleLarge'>Application</Text>
                 <List.Section>
-
                     <List.Item
                         title='City'
                         description='Choose your city for recommendations'
@@ -86,7 +88,6 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         justifyContent: 'flex-start',
-        backgroundColor: '#fff',
     },
     header: {
         paddingHorizontal: 16,

@@ -1,6 +1,6 @@
 import { View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { List, Text } from 'react-native-paper';
+import { List, Text, useTheme } from 'react-native-paper';
 import React from 'react'
 
 /*
@@ -11,6 +11,7 @@ import React from 'react'
 */
 
 const Category = ({ navigation }) => {
+    const { colors } = useTheme();
 
     const placesToVisit = {
         'Route': {
@@ -80,7 +81,7 @@ const Category = ({ navigation }) => {
 
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
             <View style={styles.header}>
                 <Text variant='displaySmall' style={{ color: "darkorange" }}>Discovia</Text>
             </View>
