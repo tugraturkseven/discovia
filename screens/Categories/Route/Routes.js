@@ -1,9 +1,8 @@
 import { View, StyleSheet } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { List, Text, Button, useTheme } from 'react-native-paper';
 
 import React from 'react'
-import Header from '../../../components/Header';
+
 
 const RouteCategories = ({ navigation }) => {
     const { colors } = useTheme();
@@ -42,7 +41,7 @@ const RouteCategories = ({ navigation }) => {
                 <List.Item
                     key={key}
                     title={key}
-                    description={routeCategories[key].description}
+                    description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>{routeCategories[key].description}</Text>}
                     left={props => <Text {...props} variant='displaySmall'>{routeCategories[key].icon}</Text>}
                     right={props => <List.Icon {...props} icon="chevron-right" />}
                     onPress={() => navigation.navigate(routeCategories[key].screen)}
@@ -52,12 +51,11 @@ const RouteCategories = ({ navigation }) => {
     };
 
     return (
-        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-            <Header goBack={true} />
+        <View style={[styles.container, { backgroundColor: colors.background }]}>
             <List.Section>
                 {renderCategories()}
             </List.Section>
-        </SafeAreaView>
+        </View>
     )
 }
 

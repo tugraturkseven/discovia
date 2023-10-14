@@ -7,8 +7,37 @@ import { PaperProvider, MD3DarkTheme as DarkTheme, MD3LightTheme as LightTheme }
 
 export default function App() {
 
+  const myDarkTheme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      primary: 'darkorange',
+      accent: 'darkorange',
+    },
+  };
+
+  const myLightTheme = {
+    ...LightTheme,
+    colors: {
+      ...LightTheme.colors,
+      primary: 'darkorange',
+      accent: 'darkorange',
+    },
+  };
+
+  const mySoftTheme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      primary: 'darkorange',
+      accent: 'darkorange',
+      background: '#041C32',
+    },
+  };
+
+
   return (
-    <PaperProvider theme={DarkTheme}>
+    <PaperProvider theme={myDarkTheme}>
       <NavigationContainer>
         <Navigation />
       </NavigationContainer >

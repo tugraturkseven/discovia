@@ -1,8 +1,7 @@
 import { View } from 'react-native'
 import React from 'react'
-import { Avatar, IconButton } from 'react-native-paper'
+import { Avatar, IconButton, useTheme } from 'react-native-paper'
 import Profile from '../assets/profile.png'
-import Icon from 'react-native-fontawesome'
 
 /*
 https://ibb.co/FHgxtgd
@@ -15,18 +14,19 @@ https://ibb.co/Y2pyxsz
 const UserAvatar = (props) => {
     const { size = 54 } = props;
     const { editable = false } = props;
+    const { colors } = useTheme();
 
     const showEditIcon = () => {
         if (editable) {
             return (
-                <IconButton style={{ position: 'absolute', top: 0, right: 0, backgroundColor: "white" }} icon="pencil" iconColor="green" size={20} />
+                <IconButton style={{ position: 'absolute', top: 0, right: 0, backgroundColor: colors.backdrop }} icon="pencil" iconColor="darkorange" size={20} />
             )
         }
     }
 
     return (
         <View>
-            <Avatar.Image size={props.size} style={{ backgroundColor: "#92E3A9" }} source={Profile} />
+            <Avatar.Image size={size} style={{ backgroundColor: colors.backdrop }} source={Profile} />
             {showEditIcon()}
         </View>
     )

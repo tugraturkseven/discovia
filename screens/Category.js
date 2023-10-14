@@ -71,24 +71,22 @@ const Category = ({ navigation }) => {
             <List.Item
                 key={key}
                 title={key}
-                description={placesToVisit[key].description}
+                description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>{placesToVisit[key].description}</Text>}
                 left={props => <Text {...props} variant='displaySmall'>{placesToVisit[key].icon}</Text>}
                 right={props => <List.Icon {...props} icon="chevron-right" />}
                 onPress={() => navigation.navigate(placesToVisit[key].screen)}
+
             />
         )
     });
 
 
     return (
-        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-            <View style={styles.header}>
-                <Text variant='displaySmall' style={{ color: "darkorange" }}>Discovia</Text>
-            </View>
+        <View style={[styles.container, { backgroundColor: colors.background }]}>
             <List.Section>
                 {listPlacesToVisit}
             </List.Section>
-        </SafeAreaView>
+        </View>
     )
 }
 
@@ -97,11 +95,6 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
         justifyContent: 'flex-start',
-        backgroundColor: "white",
-    },
-    header: {
-        paddingHorizontal: 16,
-        alignItems: 'center',
     },
 });
 

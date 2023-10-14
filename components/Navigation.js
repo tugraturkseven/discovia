@@ -1,11 +1,11 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-
 import Home from "../screens/Home";
 import Category from '../screens/Category'
 import Profile from "../screens/Profile";
 import Settings from "../screens/Settings";
 
+// Category Screens
 import Routes from "../screens/Categories/Route/Routes"
 import Restaurants from "../screens/Categories/Restaurant/Restaurants"
 import Events from "../screens/Categories/Events/Events"
@@ -16,25 +16,40 @@ import Camping from "../screens/Categories/Camping/Campings"
 import Religion from "../screens/Categories/Religion/Religions";
 import Shoppings from "../screens/Categories/Shopping/Shoppings";
 import Beachs from "../screens/Categories/Beach/Beachs";
+
+// Settings Screens
 import Account from "../screens/Settings/Account";
+import City from "../screens/Settings/City";
+import Theme from "../screens/Settings/Theme";
 
-
-
+// Navigation
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
+// Theme
+import { useTheme } from "react-native-paper";
+
 // Category Stack Navigation Screens
 const CategoryStack = () => {
+    const { colors } = useTheme();
+
     return (
         <NavigationContainer independent={true}>
             <Stack.Navigator screenOptions={{
-                tabBarShowLabel: false,
-                headerShown: false,
-            }}>
+                title: 'Discovia',
+                headerBackTitleVisible: false,
+                headerStyle: {
+                    backgroundColor: colors.background,
+                    shadowColor: colors.background, // iOS
+                    elevation: 0, // Android
+
+                },
+                headerTintColor: 'darkorange',
+                headerShadowVisible: false,
+            }
+            }>
                 <Stack.Screen name="Category" component={Category} />
                 <Stack.Screen name="Routes" component={Routes} />
                 <Stack.Screen name="Restaurants" component={Restaurants} />
@@ -52,15 +67,40 @@ const CategoryStack = () => {
     );
 }
 
+// Settings Screen Stack
 const SettingsStack = () => {
+    const { colors } = useTheme();
     return (
         <NavigationContainer independent={true}>
             <Stack.Navigator screenOptions={{
-                tabBarShowLabel: false,
-                headerShown: false,
+                title: 'Discovia',
+                headerBackTitleVisible: false,
+                headerStyle: {
+                    backgroundColor: colors.background,
+                    shadowColor: colors.background, // iOS
+                    elevation: 0, // Android
+                },
+                headerShadowVisible: false,
+                headerTintColor: 'darkorange',
+                headerRight: () => (
+                    <MaterialCommunityIcons.Button
+                        name="check"
+                        size={24}
+                        backgroundColor={colors.background}
+                        color="darkorange"
+                        onPress={() => alert('Saved.')}
+                    />
+                ),
             }}>
-                <Stack.Screen name="Settings" component={Settings} />
+                <Stack.Screen name="Settings" component={Settings} options={{
+                    headerRight: null,
+                }} />
                 <Stack.Screen name="Account" component={Account} />
+                <Stack.Screen name="City" component={City} />
+                <Stack.Screen name="Theme" component={Theme} options={{
+                    headerRight: null,
+                }} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -68,8 +108,16 @@ const SettingsStack = () => {
 
 
 const Navigation = () => {
+
+    const { colors } = useTheme();
+
     return (
-        <Tab.Navigator>
+        <Tab.Navigator screenOptions={{
+            tabBarStyle: {
+                backgroundColor: colors.background,
+                borderTopColor: colors.background,
+            }
+        }}>
             <Tab.Screen
                 name="Home"
                 component={Home}

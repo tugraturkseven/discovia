@@ -56,7 +56,7 @@ const Events = ({ navigation }) => {
                 <List.Item
                     key={key}
                     title={key}
-                    description={eventCategories[key].description}
+                    description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>{eventCategories[key].description}</Text>}
                     left={props => <Text {...props} variant='displaySmall'>{eventCategories[key].icon}</Text>}
                     right={props => <List.Icon {...props} icon="chevron-right" />}
                     onPress={() => navigation.navigate(eventCategories[key].screen)}
@@ -66,20 +66,11 @@ const Events = ({ navigation }) => {
     }
 
     return (
-        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-            <View style={styles.header}>
-                <Button style={{ margin: 0, padding: 0 }} onPress={() => navigation.goBack()}>
-                    <FontAwesomeIcon icon={faChevronLeft} size={24} style={{ color: 'green' }} />
-                </Button>
-                <Text variant='displaySmall' style={{ color: "green", }}>Travisor</Text>
-                <Button style={{ margin: 0, padding: 0 }}>
-                    <FontAwesomeIcon icon={faBell} size={24} style={{ color: colors.background }} />
-                </Button>
-            </View>
+        <View style={[styles.container, { backgroundColor: colors.background }]}>
             <List.Section>
                 {renderCategories()}
             </List.Section>
-        </SafeAreaView>
+        </View>
     )
 }
 

@@ -1,32 +1,19 @@
 import { View, StyleSheet } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { List, Text, Button, useTheme } from 'react-native-paper';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faChevronLeft, faBell } from '@fortawesome/free-solid-svg-icons';
 import UserAvatar from '../../components/UserAvatar';
-import React, { useState } from 'react'
+import React from 'react'
 
 const Account = ({ navigation }) => {
     const { colors } = useTheme();
 
     return (
-        <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-            <View style={styles.header}>
-                <Button style={{ margin: 0, padding: 0 }} onPress={() => navigation.goBack()}>
-                    <FontAwesomeIcon icon={faChevronLeft} size={24} style={{ color: 'darkorange' }} />
-                </Button>
-                <Text variant='displaySmall' style={{ color: "darkorange", }}>Discovia</Text>
-                <Button style={{ margin: 0, padding: 0 }}>
-                    <FontAwesomeIcon icon={faBell} size={24} style={{ color: colors.background }} />
-                </Button>
-            </View>
-
+        <View style={[styles.container, { backgroundColor: colors.background }]}>
             <View style={styles.profile}>
                 <UserAvatar size={128} editable={true}></UserAvatar>
                 <View style={{ flexDirection: 'column', paddingHorizontal: 16, justifyContent: 'space-evenly', width: '70%', }}>
                     <Text variant='titleMedium'>Profile Photo</Text>
-                    <Text variant='bodyMedium'>Upload a photo so your friends can recognize you</Text>
-                    <Button mode='contained' style={{ backgroundColor: 'darkorange' }}>Manage your photo</Button>
+                    <Text variant='bodyMedium' style={{ color: colors.onBackground, opacity: 0.5 }}>Upload a photo so your friends can recognize you</Text>
+                    <Button mode='contained' textColor={colors.background} style={{ backgroundColor: 'darkorange' }}>Manage your photo</Button>
                 </View>
 
             </View>
@@ -35,25 +22,25 @@ const Account = ({ navigation }) => {
                 <List.Section>
                     <List.Item
                         title='Personal Information'
-                        description='Name, birthday, gender and more'
+                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Name, birthday, gender and more</Text>}
                         left={props => <Text {...props} variant='displaySmall'>👤</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                     />
                     <List.Item
                         title='Username'
-                        description='@tugraturkseven'
+                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>@tugraturkseven</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🤖</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                     />
                     <List.Item
                         title="Email"
-                        description="tugraturkseven@travisor.com"
+                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>tugra@discovia.com</Text>}
                         left={props => <Text {...props} variant='displaySmall'>📪</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                     />
                     <List.Item
                         title="Phone"
-                        description="+90 555 555 55 55"
+                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>+90 555 555 55 55</Text>}
                         left={props => <Text {...props} variant='displaySmall'>☎️</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                     />
@@ -62,7 +49,7 @@ const Account = ({ navigation }) => {
                 <List.Section>
                     <List.Item
                         title='Password'
-                        description='Change your password'
+                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Change your password</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🔒</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                     />
@@ -71,16 +58,14 @@ const Account = ({ navigation }) => {
                 <List.Section>
                     <List.Item
                         title='Delete Account'
-                        description='Delete your account'
+                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Delete your account and all your data</Text>}
                         left={props => <Text {...props} variant='displaySmall'>💔</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                     />
                 </List.Section>
 
             </View>
-
-
-        </SafeAreaView >
+        </View >
     )
 }
 
