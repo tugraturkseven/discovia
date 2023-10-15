@@ -21,6 +21,20 @@ import Beachs from "../screens/Categories/Beach/Beachs";
 import Account from "../screens/Settings/Account";
 import City from "../screens/Settings/City";
 import Theme from "../screens/Settings/Theme";
+import Notifications from "../screens/Settings/Notifications";
+import Privacy from "../screens/Settings/Privacy";
+import Language from "../screens/Settings/Language";
+import About from "../screens/Settings/About";
+import Contact from "../screens/Settings/Contact";
+import PersonalInformation from "../screens/Settings/PersonalInformation";
+import Username from "../screens/Settings/Username";
+import Email from "../screens/Settings/Email";
+import Phone from "../screens/Settings/Phone";
+import Password from "../screens/Settings/Password";
+import DeleteAccount from "../screens/Settings/DeleteAccount";
+
+
+
 
 // Navigation
 import { NavigationContainer } from "@react-navigation/native";
@@ -100,6 +114,29 @@ const SettingsStack = () => {
                 <Stack.Screen name="Theme" component={Theme} options={{
                     headerRight: null,
                 }} />
+                <Stack.Screen name="Notifications" component={Notifications} />
+                <Stack.Screen name="Privacy" component={Privacy} />
+                <Stack.Screen name="Language" component={Language} />
+                <Stack.Screen name="About" component={About} options={{
+                    headerRight: null,
+                }} />
+                <Stack.Screen name="Contact" component={Contact} options={{
+                    headerRight: () => (
+                        <MaterialCommunityIcons.Button
+                            name="send"
+                            size={24}
+                            backgroundColor={colors.background}
+                            color="darkorange"
+                            onPress={() => alert('Message sent.')}
+                        />
+                    ),
+                }} />
+                <Stack.Screen name="PersonalInformation" component={PersonalInformation} />
+                <Stack.Screen name="Username" component={Username} />
+                <Stack.Screen name="Email" component={Email} />
+                <Stack.Screen name="Phone" component={Phone} />
+                <Stack.Screen name="Password" component={Password} />
+                <Stack.Screen name="DeleteAccount" component={DeleteAccount} />
 
             </Stack.Navigator>
         </NavigationContainer>
@@ -117,7 +154,7 @@ const Navigation = () => {
                 backgroundColor: colors.background,
                 borderTopColor: colors.background,
             }
-        }}>
+        }} >
             <Tab.Screen
                 name="Home"
                 component={Home}
@@ -162,6 +199,7 @@ const Navigation = () => {
                         <MaterialCommunityIcons name={focused ? "cog" : "cog-outline"} color={focused ? "darkorange" : "grey"} size={24} />
                     ),
                 }}
+
             />
         </Tab.Navigator>
     );

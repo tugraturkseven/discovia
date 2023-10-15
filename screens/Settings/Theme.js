@@ -3,8 +3,6 @@ import React from 'react'
 import { Text, useTheme, RadioButton, List } from 'react-native-paper'
 
 
-
-
 const Theme = () => {
     const { colors } = useTheme();
     const [value, setValue] = React.useState('Dark');
@@ -18,21 +16,24 @@ const Theme = () => {
             <RadioButton.Group value={value}>
                 <List.Section style={{ padding: 16 }}>
                     <List.Item
-                        title={() => <Text variant='headlineMedium' style={{ color: colors.onBackground }}>Dark</Text>}
+                        title='Dark'
+                        description={() => <Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Good at night time</Text>}
                         onPress={() => setValue('Dark')}
-                        left={() => <Text variant='headlineLarge' style={{ color: colors.onBackground }}>🌙</Text>}
+                        left={(props) => <Text {...props} variant='displaySmall' style={{ color: colors.onBackground }}>🌙</Text>}
                         right={() => <RadioButton value="Dark" />}
                     />
                     <List.Item
-                        title={() => <Text variant='headlineMedium' style={{ color: colors.onBackground }}>Light</Text>}
+                        title='Light'
+                        description={() => <Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Good at day time</Text>}
                         onPress={() => setValue('Light')}
-                        left={() => <Text variant='headlineLarge' style={{ color: colors.onBackground }}>☀️</Text>}
+                        left={(props) => <Text {...props} variant='displaySmall' style={{ color: colors.onBackground }}>☀️</Text>}
                         right={() => <RadioButton value="Light" />}
                     />
                     <List.Item
-                        title={() => <Text variant='headlineMedium' style={{ color: colors.onBackground }}>Soft</Text>}
+                        title='Soft'
+                        description={() => <Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Good at any time</Text>}
                         onPress={() => setValue('Soft')}
-                        left={() => <Text variant='headlineLarge' style={{ color: colors.onBackground }}>🌤️</Text>}
+                        left={(props) => <Text {...props} variant='displaySmall' style={{ color: colors.onBackground }}>🌤️</Text>}
                         right={() => <RadioButton value="Soft" />}
                     />
                 </List.Section>

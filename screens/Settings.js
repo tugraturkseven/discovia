@@ -44,18 +44,21 @@ const Settings = ({ navigation }) => {
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Choose which notifications to receive</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🔔</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('Notifications')}
                     />
                     <List.Item
                         title="Privacy"
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Control your privacy settings</Text>}
                         left={props => <Text {...props} variant='displaySmall'>👁️</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('Privacy')}
                     />
                     <List.Item
                         title="Language"
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Choose your language</Text>}
                         left={props => <Text {...props} variant='displaySmall'>💬</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('Language')}
                     />
 
                     <List.Item
@@ -63,6 +66,7 @@ const Settings = ({ navigation }) => {
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Learn more about Discovia</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🚀</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('About')}
                     />
 
                     <List.Item
@@ -70,6 +74,7 @@ const Settings = ({ navigation }) => {
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Contact us for feedbacks and help </Text>}
                         left={props => <Text {...props} variant='displaySmall'>📮</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('Contact')}
                     />
 
 

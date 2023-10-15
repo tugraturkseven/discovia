@@ -25,24 +25,28 @@ const Account = ({ navigation }) => {
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Name, birthday, gender and more</Text>}
                         left={props => <Text {...props} variant='displaySmall'>👤</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('PersonalInformation')}
                     />
                     <List.Item
                         title='Username'
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>@tugraturkseven</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🤖</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('Username')}
                     />
                     <List.Item
                         title="Email"
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>tugra@discovia.com</Text>}
                         left={props => <Text {...props} variant='displaySmall'>📪</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('Email')}
                     />
                     <List.Item
                         title="Phone"
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>+90 555 555 55 55</Text>}
                         left={props => <Text {...props} variant='displaySmall'>☎️</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('Phone')}
                     />
                 </List.Section>
                 <Text variant='titleLarge'>Security</Text>
@@ -52,6 +56,7 @@ const Account = ({ navigation }) => {
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Change your password</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🔒</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('Password')}
                     />
                 </List.Section>
                 <Text variant='titleLarge'>Data</Text>
@@ -61,6 +66,7 @@ const Account = ({ navigation }) => {
                         description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Delete your account and all your data</Text>}
                         left={props => <Text {...props} variant='displaySmall'>💔</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
+                        onPress={() => navigation.navigate('DeleteAccount')}
                     />
                 </List.Section>
 
