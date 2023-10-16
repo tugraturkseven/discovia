@@ -62,6 +62,7 @@ const CategoryStack = () => {
                 },
                 headerTintColor: 'darkorange',
                 headerShadowVisible: false,
+                headerTitleAlign: 'center',
             }
             }>
                 <Stack.Screen name="Category" component={Category} />
@@ -183,7 +184,29 @@ const Navigation = () => {
                 component={Profile}
                 options={{
                     tabBarShowLabel: false,
-                    headerShown: false,
+                    headerShown: true,
+                    headerStyle: {
+                        backgroundColor: colors.background,
+                        backgroundColor: colors.background,
+                        shadowColor: colors.background, // iOS
+                        elevation: 0, // Android
+                    },
+                    headerShadowVisible: false,
+                    headerTintColor: 'darkorange',
+                    headerTitleAlign: 'center',
+                    headerTitleStyle: {
+                        fontSize: 21,
+                    },
+                    headerRight: () => (
+                        <MaterialCommunityIcons.Button
+                            name="plus-box"
+                            size={24}
+                            backgroundColor={colors.background}
+                            color="darkorange"
+                            onPress={() => alert('Share.')}
+                        />
+                    ),
+
                     tabBarIcon: ({ focused }) => (
                         <MaterialCommunityIcons name={focused ? "account" : "account-outline"} color={focused ? "darkorange" : "grey"} size={24} />
                     ),

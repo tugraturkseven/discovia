@@ -9,6 +9,7 @@ export default function App() {
 
   const myDarkTheme = {
     ...DarkTheme,
+    roundness: 2,
     colors: {
       ...DarkTheme.colors,
       primary: 'darkorange',
