@@ -1,11 +1,19 @@
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import { useTheme, Text, Button } from 'react-native-paper'
 import PostedCategory from '../components/PostedCategory'
 import UserAvatar from '../components/UserAvatar'
-
+import PostCard from '../components/PostCard'
 const Profile = () => {
     const { colors } = useTheme();
+
+    const giresun = { uri: 'https://cdn.goturkiye.com/giresun/see-desktop-kapak.jpg' };
+    const restaurant = { uri: 'https://algedra.com.tr/assets/imgs/upload2/Sophisticated%20Restaurant%20Design/imagesforwebsite92_62df98aa3887a.jpg' };
+    const concert = { uri: 'https://images.themagger.net/wp-content/uploads/2019/01/Istanbul-Konserleri-633x433.jpeg' };
+
+
+
+
     return (
         <View style={[styles.container, { backgroundColor: colors.background }]}>
 
@@ -34,6 +42,13 @@ const Profile = () => {
                 </View>
                 <PostedCategory></PostedCategory>
             </View>
+
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <PostCard img={giresun} title='Karadeniz Turu' city='Giresun, Turkey.' />
+                <PostCard img={restaurant} title='Boğazda Yemek' city='Istanbul, Turkey.' />
+                <PostCard img={concert} title='Duman' city='Marmaris, Turkey.' />
+            </ScrollView>
+
 
         </View>
     )
