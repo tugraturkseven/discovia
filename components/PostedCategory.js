@@ -49,9 +49,10 @@ const PostedCategory = () => {
             )
         })
     }
+
     return (
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <View style={styles.container}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
+            <View style={styles.container} >
                 {renderCategories()}
             </View>
         </ScrollView>

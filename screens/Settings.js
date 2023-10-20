@@ -14,7 +14,7 @@ const Settings = ({ navigation }) => {
                 <List.Section>
                     <List.Item
                         title="Tugra Turkseven"
-                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Manage your account settings</Text>}
+                        description={<Text variant='labelLarge' style={{ color: colors.outline }}>Manage your account settings</Text>}
                         left={props => <UserAvatar {...props} size={54} />}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         style={{ paddingLeft: 8 }}
@@ -27,35 +27,35 @@ const Settings = ({ navigation }) => {
                 <List.Section>
                     <List.Item
                         title='City'
-                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Choose your city</Text>}
+                        description={<Text variant='labelLarge' style={{ color: colors.outline }}>Choose your city</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🌇</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         onPress={() => navigation.navigate('City')}
                     />
                     <List.Item
                         title="Theme"
-                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Dark, light or soft mode</Text>}
+                        description={<Text variant='labelLarge' style={{ color: colors.outline }}>Dark, light or soft mode</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🌙</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         onPress={() => navigation.navigate('Theme')}
                     />
                     <List.Item
                         title="Notifications"
-                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Choose which notifications to receive</Text>}
+                        description={<Text variant='labelLarge' style={{ color: colors.outline }}>Choose which notifications to receive</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🔔</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         onPress={() => navigation.navigate('Notifications')}
                     />
                     <List.Item
                         title="Privacy"
-                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Control your privacy settings</Text>}
+                        description={<Text variant='labelLarge' style={{ color: colors.outline }}>Control your privacy settings</Text>}
                         left={props => <Text {...props} variant='displaySmall'>👁️</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         onPress={() => navigation.navigate('Privacy')}
                     />
                     <List.Item
                         title="Language"
-                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Choose your language</Text>}
+                        description={<Text variant='labelLarge' style={{ color: colors.outline }}>Choose your language</Text>}
                         left={props => <Text {...props} variant='displaySmall'>💬</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         onPress={() => navigation.navigate('Language')}
@@ -63,7 +63,7 @@ const Settings = ({ navigation }) => {
 
                     <List.Item
                         title='About'
-                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Learn more about Discovia</Text>}
+                        description={<Text variant='labelLarge' style={{ color: colors.outline }}>Learn more about Discovia</Text>}
                         left={props => <Text {...props} variant='displaySmall'>🚀</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         onPress={() => navigation.navigate('About')}
@@ -71,7 +71,7 @@ const Settings = ({ navigation }) => {
 
                     <List.Item
                         title='Contact'
-                        description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>Contact us for feedbacks and help </Text>}
+                        description={<Text variant='labelLarge' style={{ color: colors.outline }}>Contact us for feedbacks and help </Text>}
                         left={props => <Text {...props} variant='displaySmall'>📮</Text>}
                         right={props => <List.Icon {...props} icon="chevron-right" />}
                         onPress={() => navigation.navigate('Contact')}

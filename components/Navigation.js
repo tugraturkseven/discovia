@@ -90,6 +90,7 @@ const SettingsStack = () => {
             <Stack.Navigator screenOptions={{
                 title: 'Discovia',
                 headerBackTitleVisible: false,
+                headerTitleAlign: 'center',
                 headerStyle: {
                     backgroundColor: colors.background,
                     shadowColor: colors.background, // iOS

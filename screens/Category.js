@@ -71,7 +71,7 @@ const Category = ({ navigation }) => {
             <List.Item
                 key={key}
                 title={key}
-                description={<Text variant='labelLarge' style={{ color: colors.onBackground, opacity: 0.5 }}>{placesToVisit[key].description}</Text>}
+                description={<Text variant='labelLarge' style={{ color: colors.outline }}>{placesToVisit[key].description}</Text>}
                 left={props => <Text {...props} variant='displaySmall'>{placesToVisit[key].icon}</Text>}
                 right={props => <List.Icon {...props} icon="chevron-right" />}
                 onPress={() => navigation.navigate(placesToVisit[key].screen)}
