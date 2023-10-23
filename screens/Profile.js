@@ -59,25 +59,24 @@ const Profile = () => {
 
             <View style={[styles.userSection, { borderBottomWidth: 1, borderBottomColor: colors.backdrop }]}>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                <View style={{ flexDirection: 'row', marginHorizontal: 8 }}>
                     <View style={{ flex: 1 }}>
                         <UserAvatar size={96} />
                     </View>
 
                     <View style={{ flex: 2, flexDirection: 'column', }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignContent: 'center' }}>
-
                             <View>
-                                <Text variant='titleLarge' style={[styles.textStyle, { color: colors.onBackground }]}>28</Text>
-                                <Text variant='bodyLarge' style={[styles.textStyle, { color: colors.onBackground }]}>Posts</Text>
+                                <Text variant='titleMedium' style={[styles.textStyle, { color: colors.onBackground }]}>28</Text>
+                                <Text variant='bodyMedium' style={[styles.textStyle, { color: colors.onBackground }]}>Posts</Text>
                             </View>
                             <View>
-                                <Text variant='titleLarge' style={[styles.textStyle, { color: colors.onBackground }]}>453</Text>
-                                <Text variant='bodyLarge' style={[styles.textStyle, { color: colors.onBackground }]}>Followers</Text>
+                                <Text variant='titleMedium' style={[styles.textStyle, { color: colors.onBackground }]}>453</Text>
+                                <Text variant='bodyMedium' style={[styles.textStyle, { color: colors.onBackground }]}>Followers</Text>
                             </View>
                             <View>
-                                <Text variant='titleLarge' style={[styles.textStyle, { color: colors.onBackground }]}>873</Text>
-                                <Text variant='bodyLarge' style={[styles.textStyle, { color: colors.onBackground }]}>Following</Text>
+                                <Text variant='titleMedium' style={[styles.textStyle, { color: colors.onBackground }]}>873</Text>
+                                <Text variant='bodyMedium' style={[styles.textStyle, { color: colors.onBackground }]}>Following</Text>
                             </View>
                         </View>
 
@@ -106,7 +105,7 @@ const Profile = () => {
                             borderRadius: 8,
                         }]}>
                             <Animated.View style={{ transform: [{ rotateZ: arrowAngle }] }}>
-                                <MaterialIcons name="keyboard-arrow-down" size={20} color={colors.onBackground} />
+                                <MaterialIcons name="filter-list" size={20} color={colors.onBackground} />
                             </Animated.View>
                         </View>
                     </TouchableWithoutFeedback>

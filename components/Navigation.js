@@ -88,7 +88,7 @@ const SettingsStack = () => {
     return (
         <NavigationContainer independent={true}>
             <Stack.Navigator screenOptions={{
-                title: 'Discovia',
+
                 headerBackTitleVisible: false,
                 headerTitleAlign: 'center',
                 headerStyle: {
@@ -133,12 +133,12 @@ const SettingsStack = () => {
                         />
                     ),
                 }} />
-                <Stack.Screen name="PersonalInformation" component={PersonalInformation} />
+                <Stack.Screen name="PersonalInformation" component={PersonalInformation} options={{ title: 'Personal Information' }} />
                 <Stack.Screen name="Username" component={Username} />
                 <Stack.Screen name="Email" component={Email} />
                 <Stack.Screen name="Phone" component={Phone} />
                 <Stack.Screen name="Password" component={Password} />
-                <Stack.Screen name="DeleteAccount" component={DeleteAccount} />
+                <Stack.Screen name="DeleteAccount" component={DeleteAccount} options={{ title: 'Delete Account' }} />
 
             </Stack.Navigator>
         </NavigationContainer>
@@ -154,8 +154,9 @@ const Navigation = () => {
         <Tab.Navigator screenOptions={{
             tabBarStyle: {
                 backgroundColor: colors.background,
-                borderTopColor: colors.background,
-            }
+                borderTopColor: colors.backdrop,
+            },
+
         }} >
             <Tab.Screen
                 name="Home"

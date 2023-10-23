@@ -19,6 +19,7 @@ export default function App() {
 
   const myLightTheme = {
     ...LightTheme,
+    roundness: 2,
     colors: {
       ...LightTheme.colors,
       primary: 'darkorange',
